@@ -1,7 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>pl.kainos.jacekd</groupId>
-    <version>0.0.5</version>
+    <version>0.0.5-SNAPSHOT</version>
     <artifactId>guice</artifactId>
     <properties>
         <guice.version>3.0</guice.version>
@@ -15,8 +16,7 @@
         <connection>scm:git:git:://github.com/jacekdurlik/terefere.git</connection>
         <url>https://github.com/jacekdurlik/terefere</url>
         <developerConnection>scm:git:https://github.com/jacekdurlik/terefere.git</developerConnection>
-      <tag>guice-0.0.5</tag>
-  </scm>
+    </scm>
 
     <distributionManagement>
         <repository>
