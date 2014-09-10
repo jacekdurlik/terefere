@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>pl.kainos.jacekd</groupId>
+    <version>0.0.1</version>
+    <artifactId>guice</artifactId>
+    <properties>
+        <guice.version>3.0</guice.version>
+        <scm-provider-local.version>1.9.1</scm-provider-local.version>
+
+        <release.plugin.version>2.5</release.plugin.version>
+        <deploy.plugin.version>2.8.2</deploy.plugin.version>
+    </properties>
+
+    <scm>
+        <connection>scm:git:git:://github.com/jacekdurlik/terefere.git</connection>
+        <url>https://github.com/jacekdurlik/terefere</url>
+        <developerConnection>scm:git:https://github.com/jacekdurlik/terefere.git</developerConnection>
+      <tag>guice-0.0.1</tag>
+  </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>kats_releases</id>
+            <name>Internal Releases</name>
+            <url>http://10.15.4.45:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>kats_snapshots</id>
+            <name>Internal Snapshots</name>
+            <url>http://10.15.4.45:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>${guice.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>${deploy.plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>${release.plugin.version}</version>
+                <configuration>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-local</artifactId>
+                        <version>${scm-provider-local.version}</version>
+                    </dependency>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
