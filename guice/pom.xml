@@ -2,13 +2,13 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>pl.kainos.jacekd</groupId>
-    <version>0.0.4-SNAPSHOT</version>
+    <version>0.0.5-SNAPSHOT</version>
     <artifactId>guice</artifactId>
     <properties>
         <guice.version>3.0</guice.version>
-        <scm-provider-local.version>1.9.1</scm-provider-local.version>
+        <scm-provider-git.version>1.9.1</scm-provider-git.version>
 
-        <release.plugin.version>2.4.1</release.plugin.version>
+        <release.plugin.version>2.4.2</release.plugin.version>
         <deploy.plugin.version>2.7</deploy.plugin.version>
     </properties>
 
@@ -16,7 +16,6 @@
         <connection>scm:git:git:://github.com/jacekdurlik/terefere.git</connection>
         <url>https://github.com/jacekdurlik/terefere</url>
         <developerConnection>scm:git:https://github.com/jacekdurlik/terefere.git</developerConnection>
-        <tag>guice-0.0.1</tag>
     </scm>
 
     <distributionManagement>
@@ -50,6 +49,13 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
                 <version>${release.plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>${scm-provider-git.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
