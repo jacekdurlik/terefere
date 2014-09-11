@@ -1,22 +1,21 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>pl.kainos.jacekd</groupId>
     <version>0.0.7-SNAPSHOT</version>
     <artifactId>guice</artifactId>
     <properties>
         <guice.version>3.0</guice.version>
-        <scm-provider-git.version>1.9.1</scm-provider-git.version>
 
         <release.plugin.version>2.4.2</release.plugin.version>
-        <deploy.plugin.version>2.7</deploy.plugin.version>
     </properties>
 
     <scm>
         <connection>scm:git:git:://github.com/jacekdurlik/terefere.git</connection>
         <url>https://github.com/jacekdurlik/terefere</url>
         <developerConnection>scm:git:https://github.com/jacekdurlik/terefere.git</developerConnection>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <distributionManagement>
         <repository>
@@ -42,20 +41,8 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>${deploy.plugin.version}</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
                 <version>${release.plugin.version}</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.maven.scm</groupId>
-                        <artifactId>maven-scm-provider-gitexe</artifactId>
-                        <version>${scm-provider-git.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>
