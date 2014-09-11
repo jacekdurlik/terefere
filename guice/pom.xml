@@ -2,10 +2,11 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>pl.kainos.jacekd</groupId>
-    <version>0.0.7-SNAPSHOT</version>
+    <version>0.0.9-SNAPSHOT</version>
     <artifactId>guice</artifactId>
     <properties>
         <guice.version>3.0</guice.version>
+        <scm-provider-gitexe.version>1.9.1</scm-provider-gitexe.version>
 
         <release.plugin.version>2.4.2</release.plugin.version>
     </properties>
@@ -43,6 +44,13 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
                 <version>${release.plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>${scm-provider-gitexe.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
